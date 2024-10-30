@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Básico</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Formulário Básico</h1>
+    <form action="">
+      <label for="">Nome</label>
+      <input type="text" v-model="nome"><br><br>
+      <label for="">Email</label>
+      <input type="text" v-model="email"><br><br>
+      <button>Enviar</button>
+      ________________________________________________________________________________________________________________
+      <h2>Dados do Formulário</h2><br>
+      <p>Nome: {{nome}}</p> <br>
+      <p>Email: {{email}}</p> <br>
+
+    </form>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</body>
+
+</html>
+
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        nome: "",
+        email: ""
+      }
+    },
+  });
+
+  app.mount('#app');
+</script>
